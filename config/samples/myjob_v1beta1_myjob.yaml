@@ -1,0 +1,15 @@
+apiVersion: myjob.github.com/v1beta1
+kind: MyJob
+metadata:
+  name: myjob-sample
+spec:
+  # Add fields here
+  template:
+    metadata:
+      name: pi
+    spec:
+      containers:
+        - name: pi
+          image: perl
+          command: [ "perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)" ]
+      restartPolicy: Never

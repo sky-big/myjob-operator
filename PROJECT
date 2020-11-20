@@ -1,0 +1,9 @@
+domain: github.com
+layout: go.kubebuilder.io/v2
+projectName: myjob-operator
+repo: github.com/sky-big/myjob-operator
+resources:
+- group: myjob
+  kind: MyJob
+  version: v1beta1
+version: 3-alpha

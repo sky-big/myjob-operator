@@ -22,10 +22,13 @@ import (
 )
 
 const (
+	// myjob 刚创建的时候默认状态
 	MyJobPending = "pending"
 
+	// myjob 管理的 pod 创建后对应的状态
 	MyJobRunning = "running"
 
+	// myjob 管理的 pod 执行完成后对应的状态
 	MyJobCompleted = "completed"
 )
 

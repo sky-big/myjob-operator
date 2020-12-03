@@ -43,6 +43,7 @@ type MyJobReconciler struct {
 // +kubebuilder:rbac:groups=myjob.github.com,resources=myjobs,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=myjob.github.com,resources=myjobs/status,verbs=get;update;patch
 
+// 打上该控制器需要 Pod 所有权限标识，Kubebuilder 在生成 RBAC 的时候会读取该标识然后生成对 Pod 的权限
 // +kubebuilder:rbac:groups="",resources=pods,verbs=get;list;watch;create;update;patch;delete
 
 func (r *MyJobReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) {
